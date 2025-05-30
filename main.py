@@ -1,5 +1,7 @@
 
-from function import *
+from functio import*
+missao=[]; 
+
 def menu():
     while True:
      print("Olá, seja bem-vindo ao nosso sistema:");
@@ -9,23 +11,18 @@ def menu():
      print('3.Simular lançamento.');
      print('4.Sair.');
 
-     opcao=int(input('Digite sua escolha:'))
-     if opcao==1:
-        return cadastrarmissão();
-        break;
-     elif opcao==2:
-        return listarmissão();
-        break;
-     elif opcao==3:
-        return simularlançamento();
-        break;
-     elif opcao==4:
+     opcao=input('Digite sua escolha:')
+     if opcao=="1":
+       cadastrarmissao(missao);
+     elif opcao=="2":
+       listarmissoes(missao);
+     elif opcao=="3":
+       simularlancamento(missao);
+     elif opcao=="4":
         print('Saindo do sistema...');
-        break;
+        break
      else:
-            print('Opção inválida, tente novamente.');
-
-
+            print('Opção inválida, tente novamente.')
 menu()
-        
+
     
